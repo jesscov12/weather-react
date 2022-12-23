@@ -1,0 +1,14 @@
+.col-6 {
+  text-align: center;
+}
+
+span {
+  color: #6db193;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 12px;
+}
+
+.Weather h1 {
+  font-size: 58px;
+  text-align: center;
+}

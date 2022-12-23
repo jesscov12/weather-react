@@ -1,0 +1,12 @@
+.Search .searchBtn {
+  color: #28a745;
+  border: 1px solid #28a745;
+  background-color: transparent;
+  margin-left: 5px;
+  border-radius: 3px;
+}
+.Search .inputBtn {
+  border: 1px solid #ced4da;
+  border-radius: 3px;
+  color: #6c757d;
+}

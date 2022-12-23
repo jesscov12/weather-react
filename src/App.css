@@ -1,38 +1,22 @@
-.App {
+h1 {
   text-align: center;
+  font-size: 78px;
+  font-family: "Poiret One", cursive;
+  color: #004445;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  border: 2px solid #0b8457;
+  border-radius: 30px;
+  display: block;
+  margin: 0 auto;
+  max-width: 900px;
+  border: 2px solid #0b8457;
+  border-radius: 30px;
+  padding: 20px 70px;
+  background-color: rgb(253, 251, 246);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.row {
+  border: rgb(248, 180, 0, 0.2) solid;
+  margin: 20px 190px;
+  border-radius: 30px;
 }
