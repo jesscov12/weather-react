@@ -19,6 +19,9 @@ export default function App() {
           <Current />
         </div>
       </div>
+      <a className="link" href="https://github.com/jesscov12/weather-react.git">
+        Open-Source Code by Jessica Covarrubias
+      </a>
     </div>
   );
 }
