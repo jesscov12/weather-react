@@ -8,7 +8,9 @@ span {
   font-size: 12px;
 }
 
-.Weather h1 {
+.Weather h2 {
   font-size: 58px;
   text-align: center;
+  font-family: "Poiret One", cursive;
+  color: #004445;
 }

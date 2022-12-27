@@ -1,9 +1,9 @@
 import React from "react";
-import "./Weather.css";
+
 export default function Weather() {
   return (
     <div className="Weather col-6">
-      <h1>66°</h1>
+      <h2>66°</h2>
       <span className="celsius">℃ |</span>
 
       <span className="fahrenheit"> ℉</span>
