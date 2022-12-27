@@ -10,19 +10,22 @@ h3 {
   margin: 0px 0px 12px 0px;
 }
 
-p.date {
+li.date {
   text-align: center;
   font-size: 15px;
   font-family: "Rajdhani", sans-serif;
   color: #0b8457;
   margin: 0px 0px;
+  list-style-type: none;
 }
-p.time {
+
+li.time {
   text-align: center;
   font-size: 15px;
   font-family: "Rajdhani", sans-serif;
   color: #0b8457;
   margin-bottom: 10px;
+  list-style-type: none;
 }
 
 .description,
@@ -33,4 +36,5 @@ p.time {
   color: #eac100;
   margin: 0px 0px;
   text-transform: capitalize;
+  list-style-type: none;
 }

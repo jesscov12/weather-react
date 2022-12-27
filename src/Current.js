@@ -9,10 +9,12 @@ export default function Current() {
   return (
     <div className="Current col-6">
       <h3>Currently</h3>
-      <p className="date">{date}</p>
-      <p className="time">{time}</p>
-      <p className="description"> {description}</p>
-      <p className="speed">{speed}</p>
+      <ul>
+        <li className="date">{date}</li>
+        <li className="time">{time}</li>
+        <li className="description"> {description}</li>
+        <li className="speed">{speed}</li>
+      </ul>
     </div>
   );
 }
