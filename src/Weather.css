@@ -1,4 +1,4 @@
-.col-6 {
+.Weather .col-6 {
   text-align: center;
 }
 
@@ -15,14 +15,17 @@
   color: #004445;
 }
 
-h3 {
+.Weather h3 {
   font-size: 22px;
   text-align: center;
   color: #004445;
   margin: 0px 0px 12px 0px;
 }
 
-li.date {
+.Weather ul {
+  padding: 0;
+}
+.Weather li.date {
   text-align: center;
   font-size: 15px;
   font-family: "Rajdhani", sans-serif;
@@ -31,7 +34,7 @@ li.date {
   list-style-type: none;
 }
 
-li.time {
+.Weather li.time {
   text-align: center;
   font-size: 15px;
   font-family: "Rajdhani", sans-serif;
@@ -40,7 +43,7 @@ li.time {
   list-style-type: none;
 }
 
-li.description,
+.Weather li.description,
 .speed {
   text-align: center;
   font-size: 12px;

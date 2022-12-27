@@ -4,12 +4,12 @@
   font-family: "Poiret One", cursive;
   color: #004445;
 }
-.container {
+.App .container {
   border: 2px solid #0b8457;
-  border-radius: 30px;
+  border-radius: 15px;
   display: block;
   margin: 30px auto;
-  max-width: 900px;
+  max-width: 950px;
   padding: 20px;
   background-color: rgb(253, 251, 246);
 }
