@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-span {
+.Weather span {
   color: #6db193;
   font-family: "Rajdhani", sans-serif;
   font-size: 12px;
@@ -13,4 +13,46 @@ span {
   text-align: center;
   font-family: "Poiret One", cursive;
   color: #004445;
+}
+
+h3 {
+  font-size: 22px;
+  text-align: center;
+  color: #004445;
+  margin: 0px 0px 12px 0px;
+}
+
+li.date {
+  text-align: center;
+  font-size: 15px;
+  font-family: "Rajdhani", sans-serif;
+  color: #0b8457;
+  margin: 0px 0px;
+  list-style-type: none;
+}
+
+li.time {
+  text-align: center;
+  font-size: 15px;
+  font-family: "Rajdhani", sans-serif;
+  color: #0b8457;
+  margin-bottom: 10px;
+  list-style-type: none;
+}
+
+li.description,
+.speed {
+  text-align: center;
+  font-size: 12px;
+  font-family: "Rajdhani", sans-serif;
+  color: #eac100;
+  margin: 0px 0px;
+  text-transform: capitalize;
+  list-style-type: none;
+}
+.Weather .row {
+  border: rgb(248, 180, 0, 0.2) solid;
+  border-radius: 30px;
+  margin: 0px 280px;
+  padding: 20px;
 }

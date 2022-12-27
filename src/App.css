@@ -8,14 +8,8 @@
   border: 2px solid #0b8457;
   border-radius: 30px;
   display: block;
-  margin: 0 auto;
+  margin: 30px auto;
   max-width: 900px;
-
-  padding: 20px 70px;
+  padding: 20px;
   background-color: rgb(253, 251, 246);
-}
-.App .row {
-  border: rgb(248, 180, 0, 0.2) solid;
-  border-radius: 30px;
-  max-width: 450px;
 }
