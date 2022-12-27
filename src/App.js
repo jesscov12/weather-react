@@ -19,9 +19,18 @@ export default function App() {
           <Current />
         </div>
       </div>
-      <a className="link" href="https://github.com/jesscov12/weather-react.git">
-        Open-Source Code by Jessica Covarrubias
-      </a>
+      <footer>
+        This app is an {""}
+        <a
+          className="link"
+          href="https://github.com/jesscov12/weather-react.git"
+          target="_blank"
+          rel="noreferrer"
+        >
+          open-source code
+        </a>{" "}
+        by Jessica Covarrubias
+      </footer>
     </div>
   );
 }
