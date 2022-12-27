@@ -13,3 +13,7 @@
   padding: 20px;
   background-color: rgb(253, 251, 246);
 }
+.App footer {
+  text-align: center;
+  font-size: 12px;
+}

@@ -15,6 +15,7 @@ export default function App() {
         <div>
           <Weather />
         </div>
+        <hr />
       </div>
       <footer>
         This app is an {""}
