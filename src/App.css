@@ -1,4 +1,4 @@
-h1 {
+.App h1 {
   text-align: center;
   font-size: 78px;
   font-family: "Poiret One", cursive;
@@ -17,6 +17,6 @@ h1 {
 }
 .row {
   border: rgb(248, 180, 0, 0.2) solid;
-  margin: 20px 190px;
+  margin: 20px 450px;
   border-radius: 30px;
 }
