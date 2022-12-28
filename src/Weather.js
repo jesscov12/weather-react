@@ -7,9 +7,12 @@ export default function Weather() {
       <div className="row">
         <div className="col-6">
           <h2>66°</h2>
-          <span className="celsius">℃ |</span>
-
-          <span className="fahrenheit"> ℉</span>
+          <span className="celsius">
+            <button> ℃ |</button>
+          </span>
+          <span className="fahrenheit">
+            <button>℉ </button>
+          </span>
           <br />
           <img
             src="http://openweathermap.org/img/wn/50d@2x.png"

@@ -1,32 +1,40 @@
 .Weather .col-6 {
   text-align: center;
 }
-
-.Weather span {
+.Weather button {
+  border: none;
+  background-color: rgb(253, 251, 246);
   color: #6db193;
   font-family: "Rajdhani", sans-serif;
   font-size: 12px;
+  padding: 1px;
+}
+
+.Weather button:hover {
+  color: #004445;
+  font-size: 16px;
 }
 
 .Weather h2 {
-  font-size: 58px;
-  text-align: center;
+  font-size: 54px;
   font-family: "Poiret One", cursive;
   color: #004445;
+  margin: 0;
 }
-
+.Weather img {
+  display: block;
+  margin: 0 auto;
+}
 .Weather h3 {
   font-size: 22px;
-  text-align: center;
   color: #004445;
-  margin: 0px 0px 12px 0px;
+  margin: 15px 0px 12px 0px;
 }
 
 .Weather ul {
   padding: 0;
 }
 .Weather li.date {
-  text-align: center;
   font-size: 15px;
   font-family: "Rajdhani", sans-serif;
   color: #0b8457;
@@ -35,7 +43,6 @@
 }
 
 .Weather li.time {
-  text-align: center;
   font-size: 15px;
   font-family: "Rajdhani", sans-serif;
   color: #0b8457;
@@ -45,7 +52,6 @@
 
 .Weather li.description,
 .speed {
-  text-align: center;
   font-size: 12px;
   font-family: "Rajdhani", sans-serif;
   color: #eac100;
