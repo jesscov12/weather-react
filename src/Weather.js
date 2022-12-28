@@ -13,6 +13,8 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       city: response.data.name,
+      date: "",
+      time: "",
     });
 
     setLoad(true);
@@ -41,8 +43,8 @@ export default function Weather(props) {
           <div className="col-6">
             <h3>Currently</h3>
             <ul>
-              <li className="date">12/2/2022</li>
-              <li className="time">11:25 am</li>
+              <li className="date">{weatherData.date}</li>
+              <li className="time">{weatherData.time}</li>
               <li className="description"> {weatherData.description}</li>
               <li className="speed">{Math.round(weatherData.wind)}mph</li>
             </ul>
@@ -52,8 +54,8 @@ export default function Weather(props) {
     );
   } else {
     let apiKey = `1abc917551b1a4a6a106d16dc2865cf5`;
-    let city = `Austin`;
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(handleResponse);
 
     return "Loading...";
