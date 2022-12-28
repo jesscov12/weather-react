@@ -3,10 +3,15 @@ import "./Weather.css";
 import axios from "axios";
 
 export default function Weather() {
-  let apiKey = `b6acb7c0f3eb0f2341bf2f0ab43obdt0`;
+  function handleResponse(response) {
+    console.log(response.data);
+  }
+
+  let apiKey = "b6acb7c0f3eb0f2341bf2f0ab43obdt0";
   let city = "Austin";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(handleResponse);
+
   return (
     <div className="Weather">
       <div className="row">
