@@ -1,20 +1,21 @@
 import React, { useState } from "react";
 import "./Weather.css";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 
 export default function Weather(props) {
   const [load, setLoad] = useState(false);
   const [weatherData, setWeatherData] = useState({});
 
   function handleResponse(response) {
+    console.log(response);
     setWeatherData({
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
       wind: response.data.wind.speed,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       city: response.data.name,
-      date: "",
-      time: "",
+      date: new Date(response.data.dt * 1000),
     });
 
     setLoad(true);
@@ -43,8 +44,9 @@ export default function Weather(props) {
           <div className="col-6">
             <h3>Currently</h3>
             <ul>
-              <li className="date">{weatherData.date}</li>
-              <li className="time">{weatherData.time}</li>
+              <li className="date">
+                <FormattedDate date={weatherData.date} />
+              </li>
               <li className="description"> {weatherData.description}</li>
               <li className="speed">{Math.round(weatherData.wind)}mph</li>
             </ul>
@@ -57,7 +59,6 @@ export default function Weather(props) {
 
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(handleResponse);
-
     return "Loading...";
   }
 }
