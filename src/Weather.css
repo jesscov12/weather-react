@@ -1,6 +1,12 @@
 .Weather .col-6 {
   text-align: center;
 }
+.Weather h1 {
+  text-align: center;
+  font-size: 78px;
+  font-family: "Poiret One", cursive;
+  color: #004445;
+}
 .Weather button {
   border: none;
   background-color: rgb(253, 251, 246);

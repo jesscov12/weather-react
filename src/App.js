@@ -11,7 +11,7 @@ export default function App() {
     <div className="App">
       <div className="container">
         <Search />
-        <h1>Austin</h1>
+
         <div>
           <Weather />
         </div>

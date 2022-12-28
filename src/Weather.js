@@ -1,45 +1,61 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Weather.css";
 import axios from "axios";
 
-export default function Weather() {
+export default function Weather(props) {
+  const [load, setLoad] = useState(false);
+  const [weatherData, setWeatherData] = useState({});
+
   function handleResponse(response) {
-    console.log(response.data);
+    setWeatherData({
+      temperature: response.data.main.temp,
+      description: response.data.weather[0].description,
+      wind: response.data.wind.speed,
+      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      city: response.data.name,
+    });
+
+    setLoad(true);
   }
 
-  let apiKey = "b6acb7c0f3eb0f2341bf2f0ab43obdt0";
-  let city = "Austin";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
-  axios.get(apiUrl).then(handleResponse);
-
-  return (
-    <div className="Weather">
-      <div className="row">
-        <div className="col-6">
-          <h2>66°</h2>
-          <span className="celsius">
-            <button> ℃ |</button>
-          </span>
-          <span className="fahrenheit">
-            <button>℉ </button>
-          </span>
-          <br />
-          <img
-            src="http://openweathermap.org/img/wn/50d@2x.png"
-            id="icon"
-            alt=""
-          />
-        </div>
-        <div className="col-6">
-          <h3>Currently</h3>
-          <ul>
-            <li className="date">12/2/2022</li>
-            <li className="time">11:25 am</li>
-            <li className="description"> Mist</li>
-            <li className="speed">4 mph</li>
-          </ul>
+  if (load) {
+    return (
+      <div className="Weather">
+        <h1>{weatherData.city}</h1>
+        <div className="row">
+          <div className="col-6">
+            <h2>{Math.round(weatherData.temperature)}°</h2>
+            <span className="celsius">
+              <button> ℃ |</button>
+            </span>
+            <span className="fahrenheit">
+              <button>℉ </button>
+            </span>
+            <br />
+            <img
+              src={weatherData.icon}
+              id="icon"
+              alt={weatherData.description}
+            />
+          </div>
+          <div className="col-6">
+            <h3>Currently</h3>
+            <ul>
+              <li className="date">12/2/2022</li>
+              <li className="time">11:25 am</li>
+              <li className="description"> {weatherData.description}</li>
+              <li className="speed">{Math.round(weatherData.wind)}mph</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    let apiKey = `1abc917551b1a4a6a106d16dc2865cf5`;
+    let city = `Austin`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+    axios.get(apiUrl).then(handleResponse);
+
+    return "Loading...";
+  }
 }
