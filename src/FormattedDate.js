@@ -7,7 +7,7 @@ export default function FormattedDate(props) {
   let year = props.date.getFullYear();
   let hours = props.date.getHours() % 12 || 12;
   let minutes = props.date.getMinutes();
-  let ampm = hours >= 12 ? "pm" : "am";
+  const ampm = hours >= 12 ? "pm" : "am";
 
   if (day < 10) {
     day = `0${day}`;
