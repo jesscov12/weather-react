@@ -18,7 +18,7 @@ export default function WeatherTemperature(props) {
         <span className="unit">
           <button onClick={convertToCelsius}> ℃ |</button>
 
-          <button>
+          <button className="fs-6">
             <strong>℉</strong>{" "}
           </button>
         </span>
@@ -30,7 +30,7 @@ export default function WeatherTemperature(props) {
       <div className="WeatherTemperature">
         <h2>{Math.round(celsius)}°C</h2>
         <span className="unit">
-          <button>
+          <button className="fs-6">
             {" "}
             <strong>℃</strong> |
           </button>
