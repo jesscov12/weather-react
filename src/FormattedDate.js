@@ -5,25 +5,16 @@ export default function FormattedDate(props) {
   let month = months[props.date.getMonth()];
   let day = props.date.getDate();
   let year = props.date.getFullYear();
-  let hours = props.date.getHours() % 12 || 12;
-  let minutes = props.date.getMinutes();
-
+  let timeString = props.date.toLocaleTimeString(`en-US`);
   if (day < 10) {
     day = `0${day}`;
-  }
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-
-  if (hours < 10) {
-    hours = `0${hours}`;
   }
 
   return (
     <div>
       {month}/{day}/{year}
       <br />
-      {hours}:{minutes}
+      {timeString}
     </div>
   );
 }
