@@ -12,3 +12,6 @@
 .WeatherForcast-temperature-max {
   font-size: 14px;
 }
+.WeatherForecast .row {
+  border: none;
+}
