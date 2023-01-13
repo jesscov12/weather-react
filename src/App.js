@@ -1,5 +1,6 @@
 import React from "react";
 import Weather from "./Weather";
+import WeatherForecast from "./WeatherForecast";
 
 import "./App.css";
 import "./Weather.css";
@@ -12,6 +13,7 @@ export default function App() {
           <Weather defaultCity="Austin" />
         </div>
         <hr />
+        <WeatherForecast />
       </div>
       <footer>
         This app is an {""}
