@@ -10,7 +10,6 @@ export default function WeatherForecast(props) {
     setForecast(response.data.daily);
     setLoaded(true);
   }
-  let iconData = `http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`;
 
   if (loaded) {
     console.log(forecast);
@@ -18,9 +17,13 @@ export default function WeatherForecast(props) {
       <div className="WeatherForecast">
         <div className="row">
           <div className="col">
-            <div className="WeatherForecast-day">Thu</div>
+            <div className="WeatherForecast-day">{forecast[0].dt}</div>
             <div>
-              <img className="WeatherForecast-img" src={iconData} alt=""></img>
+              <img
+                className="WeatherForecast-img"
+                src={forecast[0].weather[0].icon}
+                alt=""
+              ></img>
             </div>
             <div className="WeatherForcast-temperature">
               {" "}
