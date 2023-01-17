@@ -2,7 +2,7 @@
   text-align: center;
 }
 .WeatherForcast-temperature-min {
-  opacity: 0.5;
+  opacity: 0.6;
   margin-left: 3px;
 }
 .WeatherForecast-img {
@@ -14,4 +14,5 @@
 }
 .WeatherForecast .row {
   border: none;
+  margin: 0 35px;
 }

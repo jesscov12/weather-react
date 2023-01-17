@@ -11,6 +11,7 @@
   border: none;
   background-color: rgb(253, 251, 246);
   color: #6db193;
+
   font-family: "Rajdhani", sans-serif;
   font-size: 12px;
   padding: 1px;
@@ -55,13 +56,16 @@
   margin-bottom: 10px;
   list-style-type: none;
 }
+.Weather li.description {
+  margin-top: 12px;
+}
 
 .Weather li.description,
 .speed {
   font-size: 12px;
   font-family: "Rajdhani", sans-serif;
   color: #eac100;
-  margin: 0px 0px;
+
   text-transform: capitalize;
   list-style-type: none;
 }
