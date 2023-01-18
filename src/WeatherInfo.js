@@ -19,7 +19,11 @@ export default function WeatherInfo(props) {
               <FormattedDate date={props.data.date} />
             </li>
             <li className="description"> {props.data.description}</li>
-            <li className="speed">{Math.round(props.data.wind)}mph</li>
+            <li className="speed text-capitalied">
+              {" "}
+              Wind:
+              {""} {Math.round(props.data.wind)} {""}mph
+            </li>
           </ul>
         </div>
       </div>

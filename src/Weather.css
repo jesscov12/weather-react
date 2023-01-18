@@ -33,9 +33,9 @@
   margin: 0 auto;
 }
 .Weather h3 {
-  font-size: 22px;
+  font-size: 24px;
   color: #004445;
-  margin: 15px 0px 12px 0px;
+  margin: 6px 0px 8px 0px;
 }
 
 .Weather ul {
@@ -57,7 +57,7 @@
   list-style-type: none;
 }
 .Weather li.description {
-  margin-top: 12px;
+  margin-top: 10px;
 }
 
 .Weather li.description,
