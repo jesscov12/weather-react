@@ -49,6 +49,7 @@ export default function Weather(props) {
           />
           <input type="submit" value="Search" className="searchBtn" />
         </form>
+        <br />
         <WeatherInfo data={weatherData} />
 
         <hr />
