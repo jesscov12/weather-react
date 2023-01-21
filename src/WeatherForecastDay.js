@@ -15,14 +15,24 @@ export default function WeatherForecastDay(props) {
     let date = new Date(props.data.dt * 1000);
     let day = date.getDay();
 
-    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    let days = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
 
     return days[day];
   }
 
   return (
     <div>
-      <div className="WeatherForecast-day">{day()}</div>
+      <div className="WeatherForecast-day">
+        <strong>{day()}</strong>
+      </div>
       <div>
         <img
           className="WeatherForecast-img"
@@ -30,9 +40,10 @@ export default function WeatherForecastDay(props) {
           alt={props.data.weather[0].description}
         />
       </div>
+
       <div className="WeatherForcast-temperature">
         {" "}
-        <span className="WeatherForcast-temperature-max"> {maxTemp()} </span>
+        <span className="WeatherForcast-temperature-max"> {maxTemp()} | </span>
         <span className="WeatherForcast-temperature-min">{minTemp()}</span>
       </div>
     </div>
